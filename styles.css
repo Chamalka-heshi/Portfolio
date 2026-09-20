@@ -1312,48 +1312,76 @@ section {
 .project-media {
   position: relative;
   overflow: hidden;
-  height: 230px;
+  height: 240px;
+  background-color: #0b1120;
+  border-bottom: 1px solid var(--card-border);
+  display: flex;
+  flex-direction: column;
 }
 
-.proj-thumb-grad {
-  width: 100%;
-  height: 100%;
+.project-window-bar {
   display: flex;
   align-items: center;
-  justify-content: center;
-  transition: scale var(--transition-normal);
+  gap: 0.4rem;
+  padding: 0.55rem 0.9rem;
+  background: rgba(11, 17, 32, 0.95);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  z-index: 2;
+  position: relative;
 }
 
-.grad-1 {
-  background: linear-gradient(135deg, #1e1b4b 0%, #1e293b 50%, #042f2e 100%);
+.window-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
 }
 
-.grad-2 {
-  background: linear-gradient(135deg, #1c1917 0%, #311042 50%, #1e1b4b 100%);
+.window-dot.red { background-color: #ef4444; opacity: 0.85; }
+.window-dot.yellow { background-color: #f59e0b; opacity: 0.85; }
+.window-dot.green { background-color: #10b981; opacity: 0.85; }
+
+.window-title {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-dim);
+  margin-left: 0.4rem;
 }
 
-.project-media-svg {
-  width: 80%;
-  height: 80%;
+.project-img-wrapper {
+  width: 100%;
+  height: calc(100% - 28px);
+  position: relative;
+  overflow: hidden;
+  background: #090d16;
 }
 
-.project-card:hover .proj-thumb-grad {
-  scale: 1.04;
+.project-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  transition: transform var(--transition-normal);
+}
+
+.project-card:hover .project-img {
+  transform: scale(1.035);
 }
 
 .project-card-overlay {
   position: absolute;
-  top: 0;
+  top: 28px;
   left: 0;
   width: 100%;
-  height: 100%;
-  background-color: rgba(7, 9, 14, 0.55);
+  height: calc(100% - 28px);
+  background-color: rgba(7, 9, 14, 0.65);
   display: flex;
   align-items: center;
   justify-content: center;
   opacity: 0;
   transition: opacity var(--transition-normal);
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(4px);
+  z-index: 3;
 }
 
 .project-card:hover .project-card-overlay {
@@ -1361,14 +1389,17 @@ section {
 }
 
 .btn-detail {
-  padding: 0.7rem 1.5rem;
+  padding: 0.65rem 1.4rem;
   background-color: var(--text-color);
   color: var(--text-inverse);
   border-radius: 8px;
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: 0.86rem;
   cursor: pointer;
   transition: transform var(--transition-fast);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
 }
 
 .btn-detail:hover {
@@ -1424,8 +1455,165 @@ section {
   border: 1px solid var(--card-border);
 }
 
+.project-action-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.85rem;
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid var(--card-border);
+}
+
+.btn-proj-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.84rem;
+  font-family: var(--font-mono);
+  color: var(--text-muted);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color var(--transition-fast);
+}
+
+.btn-proj-link:hover {
+  color: var(--accent-color);
+}
+
+.btn-proj-link svg {
+  width: 14px;
+  height: 14px;
+}
+
 /* ==========================================================================
-   6. Certifications Section
+   6. Achievements & Leadership Section
+   ========================================================================== */
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.8rem;
+}
+
+.achievement-card {
+  background: var(--bg-card);
+  border: 1px solid var(--card-border);
+  border-radius: 18px;
+  padding: 2rem;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-normal), border-color var(--transition-normal), box-shadow var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.achievement-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--accent-grad);
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+}
+
+.achievement-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--card-hover-border);
+  box-shadow: var(--shadow-md);
+}
+
+.achievement-card:hover::before {
+  opacity: 1;
+}
+
+.achievement-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.achievement-icon-wrapper {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.achievement-icon-wrapper.gold {
+  background: rgba(245, 158, 11, 0.12);
+  color: #f59e0b;
+}
+
+.achievement-icon-wrapper.cyan {
+  background: rgba(6, 182, 212, 0.12);
+  color: #06b6d4;
+}
+
+.achievement-icon-wrapper.indigo {
+  background: rgba(99, 102, 241, 0.12);
+  color: #6366f1;
+}
+
+.achievement-badge {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  text-transform: uppercase;
+  color: var(--secondary-accent);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.achievement-title {
+  font-family: var(--font-head);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-color);
+  line-height: 1.3;
+}
+
+.achievement-org {
+  font-size: 0.88rem;
+  color: var(--secondary-accent);
+  font-weight: 500;
+  font-family: var(--font-mono);
+}
+
+.achievement-desc {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  flex: 1;
+}
+
+.achievement-tags {
+  display: flex;
+  gap: 0.45rem;
+  flex-wrap: wrap;
+  margin-top: 0.4rem;
+  padding-top: 0.8rem;
+  border-top: 1px solid var(--card-border);
+}
+
+.achievement-tags span {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text-color);
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  border: 1px solid var(--card-border);
+}
+
+/* ==========================================================================
+   7. Certifications Section
    ========================================================================== */
 .certs-grid {
   display: grid;
@@ -1815,15 +2003,38 @@ a.c-val:hover {
 }
 
 .modal-header-visual {
-  height: 180px;
+  position: relative;
+  height: 280px;
+  background-color: #0b1120;
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+  overflow: hidden;
+  border-bottom: 1px solid var(--card-border);
 }
 
-.modal-header-visual.grad-1 {
-  background: linear-gradient(135deg, #1e1b4b 0%, #1e293b 50%, #042f2e 100%);
+.modal-window-bar {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 10px 16px;
+  background: rgba(15, 23, 42, 0.96);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  position: relative;
+  z-index: 5;
 }
 
-.modal-header-visual.grad-2 {
-  background: linear-gradient(135deg, #1c1917 0%, #311042 50%, #1e1b4b 100%);
+.modal-preview-img {
+  width: 100%;
+  height: calc(100% - 37px);
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}
+
+.modal-header-visual img[src$=".svg"] {
+  object-fit: contain;
+  background-color: #0b1120;
+  padding: 0.5rem;
 }
 
 .modal-details {

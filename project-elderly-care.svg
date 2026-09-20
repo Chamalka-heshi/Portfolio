@@ -1,0 +1,260 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="careBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#09111e"/>
+      <stop offset="50%" stop-color="#0e172a"/>
+      <stop offset="100%" stop-color="#060b14"/>
+    </linearGradient>
+    <linearGradient id="tealGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#0891b2"/>
+    </linearGradient>
+    <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#4f46e5"/>
+    </linearGradient>
+    <linearGradient id="cardBgGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#131e33"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <filter id="cardGlow" x="-10%" y="-10%" width="120%" height="125%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#000000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <style>
+    .f-head { font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-weight: 700; }
+    .f-body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+    .f-mono { font-family: 'JetBrains Mono', 'SF Mono', Consolas, monospace; }
+  </style>
+
+  <!-- Background Base -->
+  <rect width="960" height="540" fill="url(#careBg)"/>
+
+  <!-- Calming Medical Ambient Glows -->
+  <circle cx="200" cy="150" r="160" fill="#06b6d4" opacity="0.035"/>
+  <circle cx="800" cy="400" r="180" fill="#10b981" opacity="0.035"/>
+
+  <!-- ================= TOP CAREHOME SYSTEM NAVIGATION ================= -->
+  <rect x="0" y="0" width="960" height="56" fill="#0b1322" opacity="0.96"/>
+  <line x1="0" y1="56" x2="960" y2="56" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+
+  <!-- Platform Brand -->
+  <g transform="translate(28, 14)">
+    <rect width="28" height="28" rx="8" fill="url(#tealGrad)"/>
+    <!-- Medical Heart Cross Emblem -->
+    <path d="M14 6v16M6 14h16" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round"/>
+    <circle cx="14" cy="14" r="2" fill="#ffffff"/>
+    <text x="36" y="20" class="f-head" font-size="16" fill="#f8fafc" letter-spacing="0.5">CareSync</text>
+    <text x="114" y="14" class="f-mono" font-size="8" fill="#06b6d4" letter-spacing="1">CARE HOME PORTAL</text>
+  </g>
+
+  <!-- Carehome Facility & Shift Info -->
+  <g transform="translate(255, 23)">
+    <rect width="280" height="24" rx="6" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+    <circle cx="12" cy="12" r="4" fill="#10b981"/>
+    <text x="24" y="16" class="f-body" font-size="11" fill="#cbd5e1">
+      <tspan font-weight="600">St. Jude Care Home</tspan> · Day Shift Active (7 AM - 3 PM)
+    </text>
+  </g>
+
+  <!-- Quick Metrics in Top Bar -->
+  <g transform="translate(560, 20)">
+    <rect width="118" height="28" rx="6" fill="rgba(6, 182, 212, 0.1)" stroke="rgba(6, 182, 212, 0.25)" stroke-width="1"/>
+    <text x="10" y="18" class="f-mono" font-size="10.5" fill="#06b6d4">👴 28 Residents</text>
+
+    <rect x="126" y="0" width="138" height="28" rx="6" fill="rgba(16, 185, 129, 0.1)" stroke="rgba(16, 185, 129, 0.25)" stroke-width="1"/>
+    <text x="136" y="18" class="f-mono" font-size="10.5" fill="#10b981">💊 Rx Round: 92%</text>
+
+    <!-- Emergency Call Status -->
+    <rect x="272" y="0" width="100" height="28" rx="6" fill="rgba(255, 255, 255, 0.05)" stroke="rgba(255, 255, 255, 0.1)" stroke-width="1"/>
+    <text x="282" y="18" class="f-mono" font-size="10" fill="#94a3b8">🔔 Calls: 0 Alert</text>
+  </g>
+
+  <!-- ================= SUB-HEADER: EASING DAY-TO-DAY OPERATIONS ================= -->
+  <g transform="translate(28, 68)">
+    <rect width="904" height="38" rx="8" fill="rgba(6, 182, 212, 0.06)" stroke="rgba(6, 182, 212, 0.2)" stroke-width="1"/>
+    <circle cx="20" cy="19" r="5" fill="#06b6d4"/>
+    <text x="34" y="23" class="f-head" font-size="12" fill="#f8fafc">DAY-TO-DAY CARE OPERATIONS HUB:</text>
+    <text x="260" y="23" class="f-body" font-size="12" fill="#94a3b8">Streamlining resident daily activity schedules, medication rounds, caregiver handovers &amp; nutrition logs.</text>
+    <rect x="795" y="7" width="95" height="24" rx="5" fill="url(#tealGrad)"/>
+    <text x="807" y="23" class="f-head" font-size="10.5" font-weight="700" fill="#ffffff">+ LOG ACTIVITY</text>
+  </g>
+
+  <!-- ================= 2-COLUMN OPERATIONAL DASHBOARD ================= -->
+
+  <!-- LEFT COLUMN: TODAY'S DAY-TO-DAY ACTIVITY SCHEDULE -->
+  <g transform="translate(28, 116)" filter="url(#cardGlow)">
+    <rect width="440" height="408" rx="14" fill="url(#cardBgGrad)" stroke="rgba(6, 182, 212, 0.25)" stroke-width="1.5"/>
+
+    <!-- Schedule Header -->
+    <rect x="0" y="0" width="440" height="44" rx="14" fill="rgba(6, 182, 212, 0.08)"/>
+    <path d="M18 14h14v16H18z" fill="none" stroke="#06b6d4" stroke-width="1.8" rx="2"/>
+    <line x1="18" y1="20" x2="32" y2="20" stroke="#06b6d4" stroke-width="1.8"/>
+    <text x="40" y="27" class="f-head" font-size="13.5" fill="#f8fafc">Daily Resident Activity Timeline</text>
+    <text x="330" y="27" class="f-mono" font-size="10" fill="#06b6d4">OCT 24 · DAY ROUTINE</text>
+    <line x1="0" y1="44" x2="440" y2="44" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+
+    <!-- Timeline Item 1: 08:00 AM (Completed) -->
+    <g transform="translate(18, 56)">
+      <circle cx="12" cy="14" r="8" fill="rgba(16, 185, 129, 0.2)" stroke="#10b981" stroke-width="1.5"/>
+      <text x="9" y="18" class="f-body" font-size="10" font-weight="700" fill="#10b981">✓</text>
+      <text x="30" y="12" class="f-mono" font-size="10" font-weight="700" fill="#10b981">08:00 AM</text>
+      <text x="95" y="12" class="f-body" font-size="11.5" font-weight="600" fill="#f8fafc">Assisted Breakfast &amp; Morning Hydration</text>
+      <text x="30" y="28" class="f-body" font-size="10" fill="#94a3b8">Dining Room A &amp; B · All 28 residents served · Special pureed diet catered</text>
+      <line x1="12" y1="26" x2="12" y2="48" stroke="rgba(255,255,255,0.12)" stroke-width="1.5" stroke-dasharray="2 2"/>
+    </g>
+
+    <!-- Timeline Item 2: 09:30 AM (Completed) -->
+    <g transform="translate(18, 110)">
+      <circle cx="12" cy="14" r="8" fill="rgba(16, 185, 129, 0.2)" stroke="#10b981" stroke-width="1.5"/>
+      <text x="9" y="18" class="f-body" font-size="10" font-weight="700" fill="#10b981">✓</text>
+      <text x="30" y="12" class="f-mono" font-size="10" font-weight="700" fill="#10b981">09:30 AM</text>
+      <text x="95" y="12" class="f-body" font-size="11.5" font-weight="600" fill="#f8fafc">Gentle Chair Yoga &amp; Physiotherapy</text>
+      <text x="30" y="28" class="f-body" font-size="10" fill="#94a3b8">Activity Lounge · Guided by Physiotherapist Dr. Liam · 18 residents joined</text>
+      <line x1="12" y1="26" x2="12" y2="48" stroke="rgba(255,255,255,0.12)" stroke-width="1.5" stroke-dasharray="2 2"/>
+    </g>
+
+    <!-- Timeline Item 3: 11:00 AM (In Progress) -->
+    <g transform="translate(18, 164)">
+      <circle cx="12" cy="14" r="9" fill="rgba(6, 182, 212, 0.25)" stroke="#06b6d4" stroke-width="2"/>
+      <circle cx="12" cy="14" r="4" fill="#06b6d4"/>
+      <text x="30" y="12" class="f-mono" font-size="10" font-weight="700" fill="#06b6d4">11:00 AM</text>
+      <rect x="92" y="1" width="76" height="15" rx="4" fill="rgba(6, 182, 212, 0.2)"/>
+      <text x="96" y="12" class="f-mono" font-size="8.5" font-weight="700" fill="#06b6d4">⚡ IN PROGRESS</text>
+      <text x="175" y="12" class="f-body" font-size="11.5" font-weight="600" fill="#f8fafc">Doctor's Vitals Check Round</text>
+      <text x="30" y="28" class="f-body" font-size="10" fill="#cbd5e1">Room-to-room blood pressure, glucose &amp; pulse monitoring (Wing B)</text>
+      <line x1="12" y1="27" x2="12" y2="49" stroke="rgba(255,255,255,0.12)" stroke-width="1.5" stroke-dasharray="2 2"/>
+    </g>
+
+    <!-- Timeline Item 4: 01:00 PM (Upcoming) -->
+    <g transform="translate(18, 220)">
+      <circle cx="12" cy="14" r="7" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"/>
+      <text x="30" y="12" class="f-mono" font-size="10" font-weight="700" fill="#94a3b8">01:00 PM</text>
+      <text x="95" y="12" class="f-body" font-size="11.5" font-weight="500" fill="#e2e8f0">Chef's Low-Sodium Diabetic Lunch</text>
+      <text x="30" y="28" class="f-body" font-size="10" fill="#64748b">Nutritional meal service with assisted feeding for Rooms 104 &amp; 107</text>
+      <line x1="12" y1="26" x2="12" y2="48" stroke="rgba(255,255,255,0.12)" stroke-width="1.5" stroke-dasharray="2 2"/>
+    </g>
+
+    <!-- Timeline Item 5: 02:30 PM (Upcoming) -->
+    <g transform="translate(18, 276)">
+      <circle cx="12" cy="14" r="7" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"/>
+      <text x="30" y="12" class="f-mono" font-size="10" font-weight="700" fill="#94a3b8">02:30 PM</text>
+      <text x="95" y="12" class="f-body" font-size="11.5" font-weight="500" fill="#e2e8f0">Afternoon Memory Circle &amp; Garden Walk</text>
+      <text x="30" y="28" class="f-body" font-size="10" fill="#64748b">Courtyard sensory garden · Reminiscence music &amp; jigsaw puzzles</text>
+      <line x1="12" y1="26" x2="12" y2="48" stroke="rgba(255,255,255,0.12)" stroke-width="1.5" stroke-dasharray="2 2"/>
+    </g>
+
+    <!-- Timeline Item 6: 05:00 PM (Upcoming) -->
+    <g transform="translate(18, 332)">
+      <circle cx="12" cy="14" r="7" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"/>
+      <text x="30" y="12" class="f-mono" font-size="10" font-weight="700" fill="#94a3b8">05:00 PM</text>
+      <text x="95" y="12" class="f-body" font-size="11.5" font-weight="500" fill="#e2e8f0">Family Video Calls &amp; Evening Social</text>
+      <text x="30" y="28" class="f-body" font-size="10" fill="#64748b">Tablet assistance for family check-ins followed by dinner preparation</text>
+    </g>
+
+    <!-- Bottom Daily Summary Strip -->
+    <rect x="0" y="372" width="440" height="36" rx="14" fill="#0b121e"/>
+    <text x="18" y="394" class="f-mono" font-size="9.5" fill="#94a3b8">
+      <tspan fill="#06b6d4" font-weight="600">DAY STATUS: </tspan>
+      Daily routines on schedule · Caregiver shift fatigue index: Normal
+    </text>
+  </g>
+
+  <!-- RIGHT COLUMN TOP: RESIDENT HEALTH & CARE CARD (Room 104) -->
+  <g transform="translate(488, 116)" filter="url(#cardGlow)">
+    <rect width="444" height="210" rx="14" fill="url(#cardBgGrad)" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1"/>
+
+    <!-- Resident Profile Header -->
+    <g transform="translate(18, 16)">
+      <!-- Avatar Circle -->
+      <circle cx="20" cy="20" r="20" fill="rgba(99, 102, 241, 0.2)" stroke="#6366f1" stroke-width="1.5"/>
+      <text x="11" y="26" class="f-head" font-size="15" fill="#a5b4fc">MV</text>
+
+      <text x="50" y="18" class="f-head" font-size="14" fill="#f8fafc">Margaret Vance</text>
+      <text x="175" y="18" class="f-mono" font-size="10" fill="#94a3b8">AGE 84 · ROOM 104 (WING B)</text>
+
+      <text x="50" y="34" class="f-body" font-size="10.5" fill="#38bdf8">Care Level: Moderate Assistance · Primary Caregiver: Nurse Elena R.</text>
+    </g>
+
+    <line x1="0" y1="62" x2="444" y2="62" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+
+    <!-- Real-Time Vitals Grid -->
+    <g transform="translate(18, 74)">
+      <!-- Vital 1: Heart Rate -->
+      <rect width="98" height="52" rx="8" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+      <text x="10" y="16" class="f-mono" font-size="9" fill="#94a3b8">HEART RATE</text>
+      <text x="10" y="36" class="f-head" font-size="15" fill="#f43f5e">72 <tspan font-size="10" class="f-body" fill="#94a3b8">bpm</tspan></text>
+      <text x="10" y="47" class="f-body" font-size="8.5" fill="#10b981">✓ Normal Resting</text>
+
+      <!-- Vital 2: Blood Pressure -->
+      <rect x="104" y="0" width="98" height="52" rx="8" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+      <text x="114" y="16" class="f-mono" font-size="9" fill="#94a3b8">BLOOD PRESSURE</text>
+      <text x="114" y="36" class="f-head" font-size="15" fill="#38bdf8">120/78</text>
+      <text x="114" y="47" class="f-body" font-size="8.5" fill="#10b981">✓ Target Range</text>
+
+      <!-- Vital 3: Blood Sugar -->
+      <rect x="208" y="0" width="98" height="52" rx="8" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+      <text x="218" y="16" class="f-mono" font-size="9" fill="#94a3b8">BLOOD SUGAR</text>
+      <text x="218" y="36" class="f-head" font-size="15" fill="#fbbf24">96 <tspan font-size="10" class="f-body" fill="#94a3b8">mg/dL</tspan></text>
+      <text x="218" y="47" class="f-body" font-size="8.5" fill="#10b981">✓ Pre-meal Ok</text>
+
+      <!-- Vital 4: Hydration Track -->
+      <rect x="312" y="0" width="96" height="52" rx="8" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+      <text x="322" y="16" class="f-mono" font-size="9" fill="#94a3b8">DAILY FLUID</text>
+      <text x="322" y="36" class="f-head" font-size="14" fill="#06b6d4">1,350 <tspan font-size="10" class="f-body" fill="#94a3b8">ml</tspan></text>
+      <text x="322" y="47" class="f-body" font-size="8.5" fill="#38bdf8">Goal: 1,800 ml</text>
+    </g>
+
+    <!-- Care Notes & Diet Specifics -->
+    <g transform="translate(18, 140)">
+      <rect width="408" height="56" rx="8" fill="rgba(99, 102, 241, 0.08)" stroke="rgba(99, 102, 241, 0.2)" stroke-width="1"/>
+      <text x="12" y="18" class="f-body" font-size="10.5" font-weight="600" fill="#a5b4fc">📝 Caregiver Daily Log Entry (10:15 AM):</text>
+      <text x="12" y="34" class="f-body" font-size="10" fill="#cbd5e1">"Margaret enjoyed morning chair yoga. Requested afternoon garden walk. Diet: Low sodium, soft texture."</text>
+      <text x="12" y="48" class="f-mono" font-size="9" fill="#10b981">✓ Morning Rx Administered · Mobility aid in place</text>
+    </g>
+  </g>
+
+  <!-- RIGHT COLUMN BOTTOM: DAY-TO-DAY MEDICATION & SHIFT HANDOVER -->
+  <g transform="translate(488, 342)" filter="url(#cardGlow)">
+    <rect width="444" height="182" rx="14" fill="url(#cardBgGrad)" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1"/>
+
+    <!-- Section Title -->
+    <g transform="translate(18, 16)">
+      <text x="0" y="10" class="f-head" font-size="13" fill="#f8fafc">Day-to-Day eMAR Medication &amp; Shift Coordination</text>
+      <text x="0" y="26" class="f-body" font-size="10" fill="#94a3b8">Ensuring zero missed doses, timely administrations &amp; smooth staff transitions</text>
+    </g>
+
+    <!-- Medication Round Progress Bar -->
+    <g transform="translate(18, 54)">
+      <text x="0" y="10" class="f-mono" font-size="10" fill="#cbd5e1">MEDICATION ROUND 2 OF 4 (MIDDAY)</text>
+      <text x="340" y="10" class="f-mono" font-size="10" font-weight="700" fill="#10b981">26 / 28 (93%)</text>
+      <rect y="16" width="408" height="8" rx="4" fill="#1e293b"/>
+      <rect y="16" width="379" height="8" rx="4" fill="url(#emeraldGrad)"/>
+    </g>
+
+    <!-- Shift Handover Quick Notes -->
+    <g transform="translate(18, 92)">
+      <rect width="408" height="42" rx="6" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+      <text x="10" y="17" class="f-body" font-size="10" font-weight="600" fill="#f8fafc">Staff Handover Notes (Shift Lead: Nurse Sarah):</text>
+      <text x="10" y="32" class="f-body" font-size="9.5" fill="#94a3b8">"All resident morning routines completed peacefully. Dr. visit scheduled for Rm 112 at 2 PM."</text>
+    </g>
+
+    <!-- Operational Buttons -->
+    <g transform="translate(18, 144)">
+      <rect width="128" height="26" rx="6" fill="url(#tealGrad)"/>
+      <text x="18" y="17" class="f-head" font-size="10" font-weight="700" fill="#ffffff">RECORD VITALS</text>
+
+      <rect x="138" y="0" width="138" height="26" rx="6" fill="rgba(16, 185, 129, 0.15)" stroke="#10b981" stroke-width="1"/>
+      <text x="150" y="17" class="f-head" font-size="10" font-weight="700" fill="#10b981">DISPENSE RX (eMAR)</text>
+
+      <rect x="286" y="0" width="122" height="26" rx="6" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+      <text x="300" y="17" class="f-mono" font-size="10" fill="#94a3b8">HANDOVER LOG</text>
+    </g>
+  </g>
+</svg>
