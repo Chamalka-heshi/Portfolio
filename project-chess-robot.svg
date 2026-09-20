@@ -1,0 +1,182 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1120"/>
+      <stop offset="50%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#030712"/>
+    </linearGradient>
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+    <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="indigoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="rgba(255, 255, 255, 0.04)" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="url(#bgGrad)"/>
+  <rect width="100%" height="100%" fill="url(#grid)"/>
+
+  <!-- Technical Header Tag -->
+  <g transform="translate(35, 30)">
+    <rect width="170" height="26" rx="6" fill="rgba(6, 182, 212, 0.12)" stroke="rgba(6, 182, 212, 0.3)" stroke-width="1"/>
+    <circle cx="14" cy="13" r="4" fill="#06b6d4"/>
+    <text x="26" y="17" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600" fill="#06b6d4" letter-spacing="1">SYSTEM ARCHITECTURE</text>
+  </g>
+  <text x="765" y="47" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="11" fill="#64748b">UoM EMBEDDED AI LAB</text>
+
+  <!-- Block 1: Vision Sensing Pipeline (Left) -->
+  <g transform="translate(35, 75)">
+    <rect width="210" height="340" rx="14" fill="rgba(15, 23, 42, 0.85)" stroke="rgba(6, 182, 212, 0.25)" stroke-width="1.5"/>
+    <rect x="18" y="16" width="34" height="34" rx="8" fill="rgba(6, 182, 212, 0.15)"/>
+    <!-- Camera Icon -->
+    <path d="M26 38 h18 a2 2 0 0 0 2 -2 v-9 a2 2 0 0 0 -2 -2 h-3.5 l-1.5 -2 h-7 l-1.5 2 h-4.5 a2 2 0 0 0 -2 2 v9 a2 2 0 0 0 2 2 Z" fill="none" stroke="#06b6d4" stroke-width="2"/>
+    <circle cx="35" cy="32" r="3.5" fill="none" stroke="#06b6d4" stroke-width="1.8"/>
+
+    <text x="62" y="32" font-family="'Space Grotesk', sans-serif" font-size="14" font-weight="700" fill="#f1f5f9">Computer Vision</text>
+    <text x="62" y="46" font-family="'JetBrains Mono', monospace" font-size="10" fill="#94a3b8">Overhead Sensing</text>
+
+    <!-- Chessboard Graphic Representation -->
+    <g transform="translate(20, 70)">
+      <rect width="170" height="170" rx="8" fill="rgba(11, 17, 32, 0.9)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+      <!-- Chessboard grid tiles -->
+      <g opacity="0.85">
+        <rect x="15" y="15" width="35" height="35" fill="rgba(255,255,255,0.08)"/>
+        <rect x="85" y="15" width="35" height="35" fill="rgba(255,255,255,0.08)"/>
+        <rect x="50" y="50" width="35" height="35" fill="rgba(255,255,255,0.08)"/>
+        <rect x="120" y="50" width="35" height="35" fill="rgba(255,255,255,0.08)"/>
+        <rect x="15" y="85" width="35" height="35" fill="rgba(255,255,255,0.08)"/>
+        <rect x="85" y="85" width="35" height="35" fill="rgba(255,255,255,0.08)"/>
+        <rect x="50" y="120" width="35" height="35" fill="rgba(255,255,255,0.08)"/>
+        <rect x="120" y="120" width="35" height="35" fill="rgba(255,255,255,0.08)"/>
+      </g>
+      <!-- Detection Bounding Box -->
+      <rect x="47" y="47" width="41" height="41" fill="rgba(6, 182, 212, 0.1)" stroke="#06b6d4" stroke-width="1.8" stroke-dasharray="4 2"/>
+      <circle cx="67" cy="67" r="8" fill="#06b6d4" opacity="0.85"/>
+      <path d="M67 61 v12 M61 67 h12" stroke="#0b1120" stroke-width="2"/>
+      <text x="94" y="60" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="600" fill="#06b6d4">Piece: Knight</text>
+      <text x="94" y="72" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#64748b">Pos: e4 -> f6</text>
+    </g>
+
+    <!-- Vision Pipeline Tags -->
+    <rect x="20" y="255" width="170" height="28" rx="6" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+    <text x="30" y="273" font-family="'JetBrains Mono', monospace" font-size="10" fill="#cbd5e1">OpenCV Perspective Warp</text>
+
+    <rect x="20" y="292" width="170" height="28" rx="6" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+    <text x="30" y="310" font-family="'JetBrains Mono', monospace" font-size="10" fill="#cbd5e1">Color &amp; Shape Detection</text>
+  </g>
+
+  <!-- Flow Arrow 1 -->
+  <g transform="translate(255, 230)">
+    <line x1="0" y1="0" x2="30" y2="0" stroke="#06b6d4" stroke-width="2.5" stroke-dasharray="4 3"/>
+    <polygon points="30,-4 38,0 30,4" fill="#06b6d4"/>
+    <text x="18" y="-12" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" fill="#94a3b8">USB Video</text>
+  </g>
+
+  <!-- Block 2: Tactical Processing Engine - Raspberry Pi (Center) -->
+  <g transform="translate(295, 75)">
+    <rect width="210" height="340" rx="14" fill="rgba(15, 23, 42, 0.85)" stroke="rgba(99, 102, 241, 0.3)" stroke-width="1.5"/>
+    <rect x="18" y="16" width="34" height="34" rx="8" fill="rgba(99, 102, 241, 0.15)"/>
+    <!-- CPU / Microchip Icon -->
+    <rect x="24" y="22" width="22" height="22" rx="4" fill="none" stroke="#818cf8" stroke-width="2"/>
+    <circle cx="35" cy="33" r="4" fill="#818cf8"/>
+    <line x1="30" y1="18" x2="30" y2="22" stroke="#818cf8" stroke-width="1.8"/>
+    <line x1="40" y1="18" x2="40" y2="22" stroke="#818cf8" stroke-width="1.8"/>
+    <line x1="30" y1="44" x2="30" y2="48" stroke="#818cf8" stroke-width="1.8"/>
+    <line x1="40" y1="44" x2="40" y2="48" stroke="#818cf8" stroke-width="1.8"/>
+
+    <text x="62" y="32" font-family="'Space Grotesk', sans-serif" font-size="14" font-weight="700" fill="#f1f5f9">Tactical Engine</text>
+    <text x="62" y="46" font-family="'JetBrains Mono', monospace" font-size="10" fill="#94a3b8">Raspberry Pi + Python</text>
+
+    <!-- Code / Decision Visual -->
+    <rect x="18" y="70" width="174" height="150" rx="8" fill="rgba(8, 12, 22, 0.95)" stroke="rgba(99, 102, 241, 0.2)" stroke-width="1"/>
+    <!-- Terminal Header Dots -->
+    <circle cx="30" cy="84" r="3" fill="#ef4444"/>
+    <circle cx="39" cy="84" r="3" fill="#f59e0b"/>
+    <circle cx="48" cy="84" r="3" fill="#10b981"/>
+    <text x="60" y="87" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#64748b">engine.py — Stockfish/Minimax</text>
+
+    <text x="28" y="112" font-family="'JetBrains Mono', monospace" font-size="10" fill="#818cf8">&gt; board.parse_fen()</text>
+    <text x="28" y="130" font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#34d399">&gt; best_move = calculate()</text>
+    <text x="28" y="148" font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#f1f5f9">&gt; Target: [X: 184, Y: 120]</text>
+    <text x="28" y="166" font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#06b6d4">&gt; Kinematics: θ1=42°, θ2=78°</text>
+    <text x="28" y="196" font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#fbbf24">STATUS: SERIAL TRANSMIT OK</text>
+
+    <!-- Engine Feature Tags -->
+    <rect x="18" y="235" width="174" height="38" rx="6" fill="rgba(99, 102, 241, 0.08)" stroke="rgba(99, 102, 241, 0.2)" stroke-width="1"/>
+    <text x="28" y="252" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600" fill="#818cf8">Inverse Kinematics</text>
+    <text x="28" y="265" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#94a3b8">Coordinate mapping (X,Y,Z)</text>
+
+    <rect x="18" y="285" width="174" height="38" rx="6" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+    <text x="28" y="302" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600" fill="#cbd5e1">Tactical Decision Trees</text>
+    <text x="28" y="315" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#94a3b8">Alpha-Beta pruning search</text>
+  </g>
+
+  <!-- Flow Arrow 2 -->
+  <g transform="translate(515, 230)">
+    <line x1="0" y1="0" x2="30" y2="0" stroke="#818cf8" stroke-width="2.5" stroke-dasharray="4 3"/>
+    <polygon points="30,-4 38,0 30,4" fill="#818cf8"/>
+    <text x="18" y="-12" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" fill="#94a3b8">Serial/UART</text>
+  </g>
+
+  <!-- Block 3: Hardware Actuation - Arduino & Robotic Arm (Right) -->
+  <g transform="translate(555, 75)">
+    <rect width="210" height="340" rx="14" fill="rgba(15, 23, 42, 0.85)" stroke="rgba(16, 185, 129, 0.3)" stroke-width="1.5"/>
+    <rect x="18" y="16" width="34" height="34" rx="8" fill="rgba(16, 185, 129, 0.15)"/>
+    <!-- Robotic Arm Icon -->
+    <path d="M25 44 l8 -14 l10 6 l-6 10 Z" fill="none" stroke="#10b981" stroke-width="2"/>
+    <circle cx="33" cy="30" r="3.5" fill="#10b981"/>
+    <line x1="33" y1="30" x2="43" y2="24" stroke="#10b981" stroke-width="2.5"/>
+    <path d="M43 24 l4 -5 M43 24 l6 2" stroke="#10b981" stroke-width="2" stroke-linecap="round"/>
+
+    <text x="62" y="32" font-family="'Space Grotesk', sans-serif" font-size="14" font-weight="700" fill="#f1f5f9">Robotic Actuator</text>
+    <text x="62" y="46" font-family="'JetBrains Mono', monospace" font-size="10" fill="#94a3b8">Arduino + Servo Control</text>
+
+    <!-- Mechanical Schematic Diagram -->
+    <g transform="translate(20, 70)">
+      <rect width="170" height="150" rx="8" fill="rgba(11, 17, 32, 0.9)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+
+      <!-- Base Turntable -->
+      <ellipse cx="85" cy="130" rx="40" ry="10" fill="rgba(16, 185, 129, 0.2)" stroke="#10b981" stroke-width="1.8"/>
+      <!-- Base Joint -->
+      <circle cx="85" cy="115" r="7" fill="#10b981"/>
+
+      <!-- Arm Linkage 1 -->
+      <line x1="85" y1="115" x2="60" y2="65" stroke="#34d399" stroke-width="5" stroke-linecap="round"/>
+      <!-- Elbow Joint -->
+      <circle cx="60" cy="65" r="6" fill="#06b6d4"/>
+
+      <!-- Arm Linkage 2 -->
+      <line x1="60" y1="65" x2="115" y2="40" stroke="#38bdf8" stroke-width="4" stroke-linecap="round"/>
+      <!-- Wrist Joint -->
+      <circle cx="115" cy="40" r="5" fill="#818cf8"/>
+
+      <!-- Gripper / End Effector -->
+      <line x1="115" y1="40" x2="125" y2="60" stroke="#f59e0b" stroke-width="3"/>
+      <path d="M120 60 L125 72 L121 75" fill="none" stroke="#f59e0b" stroke-width="2" stroke-linecap="round"/>
+      <path d="M130 60 L125 72 L129 75" fill="none" stroke="#f59e0b" stroke-width="2" stroke-linecap="round"/>
+
+      <!-- Captured Pawn Piece -->
+      <rect x="122" y="76" width="6" height="14" rx="2" fill="#e2e8f0"/>
+      <circle cx="125" cy="74" r="3.5" fill="#e2e8f0"/>
+    </g>
+
+    <!-- Hardware Actuation Tags -->
+    <rect x="18" y="235" width="174" height="38" rx="6" fill="rgba(16, 185, 129, 0.08)" stroke="rgba(16, 185, 129, 0.2)" stroke-width="1"/>
+    <text x="28" y="252" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600" fill="#34d399">4-DOF Servo Control</text>
+    <text x="28" y="265" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#94a3b8">PWM angle positioning</text>
+
+    <rect x="18" y="285" width="174" height="38" rx="6" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+    <text x="28" y="302" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600" fill="#cbd5e1">Physical Piece Manipulation</text>
+    <text x="28" y="315" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#94a3b8">Precision gripper calibration</text>
+  </g>
+</svg>
