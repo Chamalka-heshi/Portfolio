@@ -5,19 +5,56 @@
 
 // Project database for Modal details
 const projectData = {
-  'proj-1': {
-    title: 'Elderly Home Care Records Management System',
-    category: 'Full Stack Web Application',
-    badge: 'Healthcare & Management',
-    desc: 'A comprehensive, role-based healthcare management platform designed to streamline patient care, medical record-keeping, and caregiver operations in elderly care facilities. Built with an intuitive React frontend and a robust NestJS backend utilizing PostgreSQL and TypeORM for strict relational data modeling.',
+  'proj-sc-frost-heaven': {
+    title: 'SC-Frost Heaven – Cake Business & Bakery E-Commerce Platform',
+    category: 'Cake Business & Bakery E-Commerce',
+    badge: 'Bakery E-Commerce & Custom Cakes',
+    image: 'project-frost-heaven.png',
+    desc: 'An elegant, full-stack bakery and custom cake e-commerce platform ("Sweet moments, beautifully crafted") engineered for an artisan cake business in Sri Lanka. Provides an end-to-end digital experience with interactive celebration menus, custom cake order requests, live order tracking, customer testimonials, persistent cart state, user authentication, and administrative order management.',
     features: [
-      'Role-Based Access Control (RBAC) ensuring dedicated views and permissions for administrators, caregivers, and medical staff.',
-      'Modular RESTful APIs engineered with NestJS offering secure CRUD endpoints, request validation pipes, and error filters.',
-      'Relational schema design with PostgreSQL and TypeORM migrations ensuring data integrity and fast querying.',
-      'Responsive, component-driven user interfaces built using modern React principles and state management.',
-      'Collaborative team workflow following Git feature-branching, code reviews, and Agile software engineering practices.'
+      'Designed an elegant, responsive storefront ("Sweet moments, beautifully crafted") with categories for birthday, wedding, and celebration cakes.',
+      'Implemented an online custom cake ordering workflow enabling customers to specify cake requirements, design preferences, and celebration dates.',
+      'Built a dedicated Track Order feature allowing customers to monitor preparation, baking, and delivery status in real time.',
+      'Integrated user authentication (Login/Sign Up), shopping cart state management, and seamless online order submission.',
+      'Developed modular RESTful APIs using Node.js/NestJS connecting to relational PostgreSQL database storage.',
+      'Constructed a high-performance responsive UI using React, TypeScript, and modern styling with smooth transitions.'
     ],
-    tech: ['React', 'NestJS', 'PostgreSQL', 'TypeORM', 'TypeScript', 'JavaScript', 'HTML5', 'CSS3', 'Git', 'GitHub'],
+    tech: ['React', 'TypeScript', 'Node.js', 'NestJS', 'PostgreSQL', 'Tailwind CSS', 'RESTful APIs', 'Order Tracking', 'Git', 'GitHub'],
+    github: 'https://github.com/Chamalka-heshi',
+    demo: 'https://github.com/Chamalka-heshi'
+  },
+  'proj-relaymesh': {
+    title: 'RelayMesh – Decentralized Emergency Communication System',
+    category: 'Mesh Networking & Mobile Distributed Systems',
+    badge: 'Offline P2P Mesh Communication',
+    image: 'project-relaymesh.png',
+    desc: 'A resilient peer-to-peer mobile communication system ("Offline. Connected. Together.") built to function with zero cellular or internet connectivity during disaster and emergency scenarios. Turns nearby phones into a decentralized mesh network using Bluetooth Low Energy (BLE) and Wi-Fi Direct protocols for hop-by-hop message delivery, emergency SOS broadcasts, and offline resource mapping.',
+    features: [
+      'Developed a resilient peer-to-peer communication system enabling message transmission without internet or cellular connectivity ("Works with zero connectivity").',
+      'Implemented device-to-device communication using Bluetooth Low Energy (BLE) and Wi-Fi Direct for decentralized mesh networking.',
+      'Designed a mobile application interface using React Native for real-time messaging, emergency SOS broadcasts, and field coordination.',
+      'Integrated Mapbox and OpenStreetMap with PostGIS spatial data and compact Protocol Buffers for bandwidth-efficient transmission.',
+      'Utilized WatermelonDB and SQLite for offline-first local persistence, synchronized across distributed nodes when connectivity recovers.'
+    ],
+    tech: ['React Native', 'TypeScript', 'Go', 'PostgreSQL', 'PostGIS', 'WatermelonDB', 'SQLite', 'Protocol Buffers', 'BLE Mesh', 'Wi-Fi Direct', 'Mapbox', 'Tailwind CSS', 'Git', 'GitHub'],
+    github: 'https://github.com/Chamalka-heshi',
+    demo: 'https://github.com/Chamalka-heshi'
+  },
+  'proj-1': {
+    title: 'Elderly Care Home Records Management System',
+    category: 'Modernized Care Home Management Platform',
+    badge: 'Caregiver Operations & Day-to-Day Records',
+    image: 'project-elderly-care.png',
+    desc: 'A modernized digital healthcare and residential carehome platform ("Stay Comfortable Like Your Home") engineered specifically to ease day-to-day operations, resident care, and clinical workflows. Connects families, doctors, caregivers, and administrators with dedicated panels to monitor assigned patients, record daily care notes, log patient vitals with active critical alerts (BP, HR, SpO2, Temp), track medication administration status, and manage daily care schedules.',
+    features: [
+      'Engineered a specialized Caregiver Operations Dashboard providing real-time daily overviews, assigned patient counts, pending medications, and active vital alerts.',
+      'Implemented Vital Records management with automatic clinical threshold checking to trigger immediate critical alerts for abnormal BP, Heart Rate, SpO2, or Temperature.',
+      'Developed Medication Updates tracking (administered vs. pending) to ensure zero missed doses and strict scheduling compliance across patient rounds.',
+      'Built Daily Care Notes and Care Schedule modules allowing caregivers to document routine observations and coordinate scheduled tasks.',
+      'Created a warm, accessible public portal ("Stay Comfortable Like Your Home") with service breakdowns, cost & payment plans, and role-based authentication.',
+      'Designed relational PostgreSQL schemas with TypeORM migrations and modular NestJS RESTful APIs for secure, role-based access control (RBAC).'
+    ],
+    tech: ['React', 'NestJS', 'PostgreSQL', 'TypeORM', 'TypeScript', 'Caregiver Panel', 'Vital Records', 'Medication Tracking', 'RBAC', 'Git', 'GitHub'],
     github: 'https://github.com/Chamalka-heshi',
     demo: 'https://github.com/Chamalka-heshi'
   },
@@ -25,6 +62,7 @@ const projectData = {
     title: 'Autonomous Chess Playing Robot',
     category: 'First Year Hardware Project',
     badge: 'Robotics & Computer Vision',
+    image: 'project-chess-robot.svg',
     desc: 'An intelligent hardware and software robotic system capable of playing chess against human opponents in physical space. The system integrates computer vision for chessboard state detection, processes real-time tactical moves with an embedded chess engine, and coordinates a robotic arm for physical piece movement.',
     features: [
       'Real-time chessboard state detection and piece localization using OpenCV and Computer Vision algorithms.',
@@ -196,8 +234,15 @@ document.addEventListener('DOMContentLoaded', () => {
       if (modalLinkGithub) modalLinkGithub.href = data.github;
 
       if (modalVisual) {
-        modalVisual.className = 'modal-header-visual';
-        modalVisual.classList.add(projId === 'proj-1' ? 'grad-1' : 'grad-2');
+        modalVisual.innerHTML = `
+          <div class="modal-window-bar">
+            <span class="window-dot red"></span>
+            <span class="window-dot yellow"></span>
+            <span class="window-dot green"></span>
+            <span class="window-title">${data.title}</span>
+          </div>
+          <img src="${data.image}" alt="${data.title}" class="modal-preview-img" />
+        `;
       }
 
       if (modalOverlay) modalOverlay.classList.add('open');
@@ -287,113 +332,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('scroll', revealOnScroll);
   revealOnScroll();
 
-  /* 10. Initialize Particles Mesh */
-  initParticlesMesh();
 });
-
-/* Particle Background with Subtle Mesh */
-function initParticlesMesh() {
-  const canvas = document.getElementById('particle-canvas');
-  if (!canvas) return;
-  const ctx = canvas.getContext('2d');
-  let particlesArray = [];
-  let w = canvas.width = window.innerWidth;
-  let h = canvas.height = window.innerHeight;
-
-  const mouse = {
-    x: null,
-    y: null,
-    radius: 120
-  };
-
-  window.addEventListener('mousemove', (e) => {
-    mouse.x = e.clientX;
-    mouse.y = e.clientY;
-  });
-
-  window.addEventListener('mouseleave', () => {
-    mouse.x = null;
-    mouse.y = null;
-  });
-
-  window.addEventListener('resize', () => {
-    w = canvas.width = window.innerWidth;
-    h = canvas.height = window.innerHeight;
-  });
-
-  class Particle {
-    constructor() {
-      this.x = Math.random() * w;
-      this.y = Math.random() * h;
-      this.size = Math.random() * 1.8 + 0.6;
-      this.speedX = Math.random() * 0.35 - 0.175;
-      this.speedY = Math.random() * 0.35 - 0.175;
-    }
-    update() {
-      this.x += this.speedX;
-      this.y += this.speedY;
-
-      if (this.x > w || this.x < 0) this.speedX = -this.speedX;
-      if (this.y > h || this.y < 0) this.speedY = -this.speedY;
-    }
-    draw() {
-      ctx.fillStyle = getComputedStyle(document.documentElement).getPropertyValue('--accent-color') + '22';
-      ctx.beginPath();
-      ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-      ctx.fill();
-    }
-  }
-
-  function setupParticles() {
-    particlesArray = [];
-    const maxParticles = Math.min((w * h) / 16000, 60);
-    for (let i = 0; i < maxParticles; i++) {
-      particlesArray.push(new Particle());
-    }
-  }
-
-  function animateParticles() {
-    ctx.clearRect(0, 0, w, h);
-    particlesArray.forEach(p => {
-      p.update();
-      p.draw();
-    });
-
-    // Draw connecting links
-    ctx.strokeStyle = getComputedStyle(document.documentElement).getPropertyValue('--accent-color') + '06';
-    for (let a = 0; a < particlesArray.length; a++) {
-      if (mouse.x !== null && mouse.y !== null) {
-        const dxMouse = particlesArray[a].x - mouse.x;
-        const dyMouse = particlesArray[a].y - mouse.y;
-        const distMouse = Math.hypot(dxMouse, dyMouse);
-        if (distMouse < mouse.radius) {
-          ctx.strokeStyle = getComputedStyle(document.documentElement).getPropertyValue('--accent-color') + '1c';
-          ctx.beginPath();
-          ctx.moveTo(particlesArray[a].x, particlesArray[a].y);
-          ctx.lineTo(mouse.x, mouse.y);
-          ctx.stroke();
-        }
-      }
-
-      for (let b = a + 1; b < particlesArray.length; b++) {
-        const dx = particlesArray[a].x - particlesArray[b].x;
-        const dy = particlesArray[a].y - particlesArray[b].y;
-        const distance = Math.hypot(dx, dy);
-        if (distance < 100) {
-          ctx.strokeStyle = getComputedStyle(document.documentElement).getPropertyValue('--accent-color') + '05';
-          ctx.beginPath();
-          ctx.moveTo(particlesArray[a].x, particlesArray[a].y);
-          ctx.lineTo(particlesArray[b].y, particlesArray[b].y);
-          ctx.stroke();
-        }
-      }
-    }
-    requestAnimationFrame(animateParticles);
-  }
-
-  setupParticles();
-  animateParticles();
-}
 
 /* Toast Engine */
 function showToast(msg, type = 'success') {
